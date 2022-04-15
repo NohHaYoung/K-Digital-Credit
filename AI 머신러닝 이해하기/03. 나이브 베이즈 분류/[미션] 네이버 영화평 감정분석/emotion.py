@@ -104,7 +104,7 @@ def calculate_doc_prob(training_sentence, testing_sentence, alpha):
             else:
                 logprob +=math.log(alpha/total_token)
         except ZeroDivisionError:
-            pass
+            print("Zero Division Error")
             
     return logprob
 
