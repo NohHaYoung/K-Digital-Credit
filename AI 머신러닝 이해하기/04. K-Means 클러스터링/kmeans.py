@@ -8,7 +8,7 @@ def main():
     X, attributes = input_data()
     X = normalize(X)
     pca, pca_array = run_PCA(X, 2)
-    labels = kmeans(pca_array, 5, [0, 1, 2, 3, 4]) # k=3, 시작중심점 3개[1, 2, 3]
+    labels = kmeans(pca_array, 3, [0, 1, 2]) # k=3, 시작중심점 3개[1, 2, 3]
     #print(labels)
     visualize_2d_wine(pca_array, labels)
 
